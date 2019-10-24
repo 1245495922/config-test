@@ -1,12 +1,1 @@
-server:
-  port: 7092
-spring:
-  application:
-    name:  service-producer
-eureka:
-  client:
-    service-url:
-      defaultZone: http://test:abc123@localhost:8761/eureka/
-feign:
-  hystrix:
-    enabled: true
+writer: pro
