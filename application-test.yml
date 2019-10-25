@@ -1,17 +1,8 @@
 server:
-  port: 8763
+  port: 8092
 spring:
   application:
-    name: service-config
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/1245495922/config-test
-          search-paths: config-test
-          username: 1245495922
-          password: FJlt@10010
-      label: master
+    name: service-producer
 eureka:
   client:
     service-url:
@@ -19,5 +10,12 @@ eureka:
 feign:
   hystrix:
     enabled: true
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
     
 writer: aaaaaaaaaaaa
